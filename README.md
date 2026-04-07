@@ -64,6 +64,10 @@ uv run streamlit run streamlit_app.py
 - `delete_video_task`
 - `generate_video_sequence`
 
+## Review Docs
+
+- `MCP工具清单.md`
+
 ## Testing
 
 ```bash
