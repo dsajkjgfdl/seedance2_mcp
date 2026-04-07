@@ -36,6 +36,12 @@ Or run it with the FastMCP CLI:
 uv run fastmcp run server.py
 ```
 
+Run the Streamlit test console:
+
+```bash
+uv run streamlit run streamlit_app.py
+```
+
 ## Environment Variables
 
 - `ARK_API_KEY`: required
