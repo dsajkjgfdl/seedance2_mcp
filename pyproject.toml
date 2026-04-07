@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "seedance-fastmcp"
+version = "0.1.0"
+description = "FastMCP server for Seedance video generation on Volcengine Ark."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastmcp>=3.2.0,<4",
+  "httpx>=0.28.1,<1",
+  "pydantic>=2.11.3,<3",
+  "python-dotenv>=1.1.0,<2",
+  "volcengine-python-sdk[ark]>=5.0.22,<6",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.5,<9",
+  "pytest-asyncio>=0.26.0,<1",
+  "ruff>=0.11.5,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/seedance_mcp"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
